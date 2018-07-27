@@ -1,15 +1,15 @@
-# Decompress Snappy format
+# Decompress LZO format
 
-Decompress [Snappy format](https://google.github.io/snappy/) using [this](https://github.com/andrix/python-snappy) python library
+Decompress [LZO format](https://www.lzop.org/) 
 
-Read all files in `/data/in/files/**/*` (regardless of extensions and how deeply they are nested), parse with  and write to corresponding (folder hierarchy is kept) locations in `/data/out/files`
+Read all files in `/data/in/files/**/*.lzo` (regardless of extensions and how deeply they are nested) and write to `/data/out/files` (directory structure is destroyed)
 
 
 # Configuration
 ```
 {
     "definition": {
-        "component": "pocin.processor-decompress-snappy"
+        "component": "apac.processor-decompress-lzo"
     }
 }
 
@@ -19,15 +19,5 @@ Read all files in `/data/in/files/**/*` (regardless of extensions and how deeply
 ## Run locally
 
 ```
-
 docker-compose run --rm dev
-```
-
-## Run tests
-	
-
-```
-make test
-# after dev session is finished to clean up containers..
-make clean 
 ```
