@@ -6,4 +6,4 @@ RUN apt-get update && apt-get install -y lzop
 COPY . /code/
 
 # Run the application
-CMD /code/main.sh
+CMD bash /code/main.sh
