@@ -1,4 +1,6 @@
 #!/bin/bash
 
 cd /data/out/files
-find /data/in/files -name '*.lzo' -exec lzop -x {} \;
+
+echo "Decompressing"
+find /data/in/files -name '*.lzo'  -exec  /code/decompress-and-replace.sh {} \;
